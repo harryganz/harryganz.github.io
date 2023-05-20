@@ -194,3 +194,9 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .vg { color: #008080; }
 .highlight .vi { color: #008080; }
 .highlight .il { color: #099; }
+
+@font-face { font-family: 'PT Sans'; font-weight: 400; src: url("/assets/fonts/PT_Sans/PTSans-Regular.ttf") format("truetype"); }
+@font-face { font-family: 'Alfa Slab One'; font-weight: 400; src: url("/assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf") format("truetype"); }
+body { font-family: 'PT-Sans'; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Alpha Slab One'; }
