@@ -17,11 +17,29 @@
 
 body {
     font-family: 'PT-Sans';
+    font-size: 14px;
     background-color: #f7f7f7;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
 }
 
 .site-header {
     border-bottom: none;
+}
+
+.site-title {
+    float: none;
+    margin-left: 0.25em;
+    line-height: 54px;
+}
+
+.site-nav {
+    float: none;
+    margin-left: auto;
+    line-height: 54px;
 }
 
 main {
@@ -37,6 +55,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
     box-shadow: 2px 2px 3px;
     flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+   .page-content > div.wrapper {
+    box-shadow: none;
+   }
 }
 
 .site-footer {
