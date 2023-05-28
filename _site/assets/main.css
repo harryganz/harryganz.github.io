@@ -197,7 +197,7 @@ table td { border: 1px solid #e8e8e8; }
 
 @font-face { font-family: 'PT Sans'; font-weight: 400; src: url("/assets/fonts/PT_Sans/PTSans-Regular.ttf") format("truetype"); }
 @font-face { font-family: 'Alfa Slab One'; font-weight: 400; src: url("/assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf") format("truetype"); }
-body { font-family: 'PT-Sans'; font-size: 14px; background-color: #f7f7f7; }
+body { font-family: 'PT-Sans'; font-size: 12px; background-color: #f7f7f7; }
 
 .header-content { display: flex; flex-direction: row; }
 
