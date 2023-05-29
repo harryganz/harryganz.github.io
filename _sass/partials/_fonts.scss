@@ -1,0 +1,18 @@
+$ubuntu-mono-font-path: "/assets/fonts/Ubuntu_Mono";
+
+@font-face {
+    font-family: 'Ubuntu-Mono';
+    src: url("#{$ubuntu-mono-font-path}/UbuntuMono-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Mono';
+    src: url("#{$ubuntu-mono-font-path}/UbuntuMono-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Ubuntu-Mono';
+    src: url("#{$ubuntu-mono-font-path}/UbuntuMono-Italic.ttf") format('truetype');
+    font-style: italic;
+}

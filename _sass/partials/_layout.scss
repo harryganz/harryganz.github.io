@@ -22,7 +22,12 @@ header {
     padding: 2em 1em;
     border-bottom: 2px solid #ffffff;
     @extend %resize-at-breakpoint-md;
+
+    a.site-title {
+        text-decoration: none;
+    }
 }
+
 
 main {
     padding: 1em;
@@ -34,9 +39,11 @@ main {
     display: flex;
     &.flex-column {
         flex-direction: column;
+        align-items: baseline;
     }
     &.flex-row {
         flex-direction: row;
+        align-items: baseline;
     }
     > .flex-item {
         display: block;

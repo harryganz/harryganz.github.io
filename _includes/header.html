@@ -1,7 +1,7 @@
 <header>
     <div class="flex flex-row">
         {%- assign page_paths = site.pages | map: 'path' -%}
-        <a class="site-title flex-item" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+        <a class="site-title flex-item" rel="author" href="{{ '/' | relative_url }}"><h1>{{ site.title | escape }}</h1></a>
         {%- if page_paths -%}
         <nav class="site-nav flex-right">
             <div class="flex flex-row">
