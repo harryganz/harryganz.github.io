@@ -1,0 +1,48 @@
+html,body {
+    background-color: $background-color;
+    height: 100%;
+    margin: 0
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 400px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: $main-color;
+    width: 400px;
+    margin: 0 auto;
+    flex: 1
+}
+
+.flex {
+    display: flex;
+    &.flex-column {
+        flex-direction: column;
+    }
+    &.flex-row {
+        flex-direction: row;
+    }
+    > .flex-item {
+        display: block;
+        margin: 0 1em;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    > .flex-left {
+        margin-right: auto;
+    }
+    > .flex-right {
+        margin-left: auto;
+    }
+}

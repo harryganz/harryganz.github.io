@@ -1,0 +1,18 @@
+body { font: 400 14px/1.25 "Roboto", sans-serif; color: #fff; }
+
+html, body { background-color: #000; height: 100%; margin: 0; }
+
+body { display: flex; flex-direction: column; }
+
+header { width: 400px; margin: 0 auto; }
+
+main { background-color: rgba(79, 79, 79, 0.3); width: 400px; margin: 0 auto; flex: 1; }
+
+.flex { display: flex; }
+.flex.flex-column { flex-direction: column; }
+.flex.flex-row { flex-direction: row; }
+.flex > .flex-item { display: block; margin: 0 1em; }
+.flex > .flex-item:first-child { margin-left: 0; }
+.flex > .flex-item:last-child { margin-right: 0; }
+.flex > .flex-left { margin-right: auto; }
+.flex > .flex-right { margin-left: auto; }

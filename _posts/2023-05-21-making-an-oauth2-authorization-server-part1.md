@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Making an Oauth2 Authorization Server | Part 1
 date: 2023-05-21 21:02:00 -0400
 categories: oauth2 authorization golang
