@@ -19,13 +19,16 @@ body {
 }
 
 header {
-    padding: 2em 1em;
+    padding: 2em 1em 0.5em 1em;
     border-bottom: 2px solid #ffffff;
     @extend %resize-at-breakpoint-md;
-
     a.site-title {
         text-decoration: none;
     }
+    .site-logo {
+        transform: translateY(1em)
+    }
+    
 }
 
 main {

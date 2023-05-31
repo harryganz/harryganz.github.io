@@ -1,5 +1,6 @@
 <header>
     <div class="flex flex-row">
+        <img class="site-logo" alt="Bear Logo" src="{{ '/assets/img/bear_logo.png' | relative_url }}" height="64px" width="64px" />
         {%- assign page_paths = site.pages | map: 'path' -%}
         <a class="site-title flex-item" rel="author" href="{{ '/' | relative_url }}"><h1>{{ site.title | escape }}</h1></a>
         {%- if page_paths -%}

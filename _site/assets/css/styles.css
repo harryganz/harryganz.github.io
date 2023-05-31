@@ -207,8 +207,9 @@ html, body { background-color: #1d1d1d; height: 100%; margin: 0; }
 
 body { display: flex; flex-direction: column; }
 
-header { padding: 2em 1em; border-bottom: 2px solid #ffffff; }
+header { padding: 2em 1em 0.5em 1em; border-bottom: 2px solid #ffffff; }
 header a.site-title { text-decoration: none; }
+header .site-logo { transform: translateY(1em); }
 
 main { padding: 1em; flex: 1; }
 
