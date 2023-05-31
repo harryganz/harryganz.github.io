@@ -14,6 +14,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In turpis lacus, sagitt
 
 Suspendisse lacinia metus et lectus posuere bibendum. Vestibulum venenatis, sapien in consectetur fringilla, lectus magna mattis libero, id convallis ante diam quis quam. Maecenas massa ante, sagittis aliquet nisl a, pharetra sagittis nisi. Nam sit amet condimentum nulla. Vestibulum malesuada tellus et nibh tempus vestibulum. Curabitur quis porttitor nunc. Sed congue elementum tempus. Nulla sed felis id sem eleifend auctor. Sed posuere in libero vitae pharetra.
 
+{% highlight r %}
+f = function(x) {
+    x*2
+}
+
+x <- lapply(1:100, f)
+{% endhighlight %}
+
 Quisque et malesuada ligula. Etiam egestas suscipit sagittis. Cras facilisis erat vitae neque molestie, eget egestas diam mattis. Ut vitae lectus viverra, lobortis orci id, sodales felis. Etiam placerat ligula id finibus luctus. Quisque in blandit ante. Aliquam molestie libero vel turpis elementum consectetur id vel lorem. Sed libero dui, dapibus ac blandit sit amet, tincidunt sollicitudin augue. Aliquam ante purus, egestas id semper rhoncus, vulputate vitae libero. Duis vel blandit augue. Aenean porttitor volutpat augue, tempus consequat purus imperdiet nec. Quisque rhoncus, magna et commodo porta, nibh lectus commodo lorem, vel elementum ex metus nec est. Morbi commodo massa in orci pretium cursus. In pretium felis nec tempor varius.
 
 Pellentesque venenatis vehicula est, a condimentum neque ultrices eget. Curabitur ac erat ut lectus facilisis tempor. Nulla facilisi. Curabitur a lectus et metus dignissim feugiat. Morbi cursus tortor sit amet convallis imperdiet. Maecenas dui nibh, egestas sed elementum id, sollicitudin id purus. Vivamus imperdiet dui a erat tempor, eget scelerisque nisl bibendum. Nunc vitae arcu vitae lorem dictum volutpat. Aenean sodales luctus diam vel consectetur. Pellentesque pulvinar libero eu tempus dictum. Mauris ultricies dolor tellus, at vulputate enim sollicitudin a. In fringilla id magna ac varius. Nunc venenatis leo sed odio ornare pretium. Mauris tincidunt sodales rhoncus. Nulla posuere, quam vel tincidunt porttitor, eros odio porta mi, ac venenatis quam mauris a eros. Integer et vestibulum neque.

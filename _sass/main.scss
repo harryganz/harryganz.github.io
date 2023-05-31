@@ -16,8 +16,8 @@ $background-color: #1d1d1d;
 $breakpoint-md: 600px;
 
 @import 
+  "monokai",
   "partials/mixins",
   "partials/fonts",
   "partials/typography",
-  "partials/layout"
-  ;
+  "partials/layout";
