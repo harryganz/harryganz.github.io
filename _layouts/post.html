@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="post">
+    {% if page.title %}
+        <h2 class="post-title">{{ page.title | escape }}</h2>
+    {% endif %}
+
+    <div class="post-content">{{ content }}</div>
+
+    {% assign sorted_posts = site.posts | sort: 'date' %}
+    {% for post in sorted_posts %}
+        {% if post.url == page.url %}
+            {% assign current_index = forloop.index0 -%}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="flex flex-column">
+    {% if current_index > 0 %}
+        {% assign previous_index = current_index | minus:1 %}
+        {% assign previous_post = sorted_posts[previous_index] %}
+        <a href="{{ previous_post.url }}">Previous: {{ previous_post.title }}</a>
+    {% endif %}
+    {% assign last_index = sorted_posts.size | minus:1 %}
+    {% if current_index < last_index %}
+        {% assign next_index = current_index | plus:1 %}
+        {% assign next_post = sorted_posts[next_index] %}
+
+        <a href="{{ next_post.url }}" class="flex-right">Next: {{ next_post.title }}</a>
+    {% endif %}
+    </div>
+
+
+</article>

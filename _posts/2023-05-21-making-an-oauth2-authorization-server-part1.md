@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Making an Oauth2 Authorization Server | Part 1
 date: 2023-05-21 21:02:00 -0400
-categories: oauth2 authorization golang
+categories: oauth2
 ---
 
 Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn't work the way you want. If you don't want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go.

@@ -11,15 +11,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn’t work the way you want. If you don’t want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go." />
 <meta property="og:description" content="Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn’t work the way you want. If you don’t want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go." />
-<link rel="canonical" href="http://localhost:4000/oauth2/authorization/golang/2023/05/21/making-an-oauth2-authorization-server-part1.html" />
-<meta property="og:url" content="http://localhost:4000/oauth2/authorization/golang/2023/05/21/making-an-oauth2-authorization-server-part1.html" />
+<link rel="canonical" href="http://localhost:4000/oauth2/2023/05/21/making-an-oauth2-authorization-server-part1.html" />
+<meta property="og:url" content="http://localhost:4000/oauth2/2023/05/21/making-an-oauth2-authorization-server-part1.html" />
 <meta property="og:site_name" content="Harry Ganz" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-05-21T21:02:00-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Making an Oauth2 Authorization Server Part 1" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-21T21:02:00-04:00","datePublished":"2023-05-21T21:02:00-04:00","description":"Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn’t work the way you want. If you don’t want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go.","headline":"Making an Oauth2 Authorization Server Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/oauth2/authorization/golang/2023/05/21/making-an-oauth2-authorization-server-part1.html"},"url":"http://localhost:4000/oauth2/authorization/golang/2023/05/21/making-an-oauth2-authorization-server-part1.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-21T21:02:00-04:00","datePublished":"2023-05-21T21:02:00-04:00","description":"Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn’t work the way you want. If you don’t want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go.","headline":"Making an Oauth2 Authorization Server Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/oauth2/2023/05/21/making-an-oauth2-authorization-server-part1.html"},"url":"http://localhost:4000/oauth2/2023/05/21/making-an-oauth2-authorization-server-part1.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head><body><header>
@@ -28,7 +28,12 @@
             <div class="flex flex-row"><a class="page-link flex-item" href="/about/">About</a><a class="page-link flex-item" href="/">Home</a></nav></div>
 </header><main aria-label="Content">
       <div class="flex flex-column">
-        <p>Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn’t work the way you want. If you don’t want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go.</p>
+        <article class="post">
+    
+        <h2 class="post-title">Making an Oauth2 Authorization Server | Part 1</h2>
+    
+
+    <div class="post-content"><p>Oauth2 is one of those things that most web developers have to use, but many do not really understand. Maybe you use Passprt.js or an Okta client to handle the logic for you and are left scratching your head when something doesn’t work the way you want. If you don’t want to know, then you can stop reading. However, if you are curious and want to understand what Oauth2 is, what it is for, and how it is related to things like JSON Web Tokens (JWT) and OpenID connect this tutorial will explain it by building an authorization service in Go.</p>
 
 <h2 id="why">Why?</h2>
 
@@ -61,7 +66,26 @@
   <li>Access tokens should be valid for 60 minutes by default and refresh tokens should be valid for 30 days, by default</li>
   <li>The validity of each token type should be updatable for each client</li>
 </ul>
+</div>
 
+    
+    
+        
+            
+
+    <div class="flex flex-column">
+    
+    
+    
+        
+        
+
+        <a href="/2023/05/30/test.html" class="flex-right">Next: Test</a>
+    
+    </div>
+
+
+</article>
       </div>
     </main>
   </body>

@@ -3,5 +3,9 @@ layout: default
 ---
 
 <div class="page-content">
-    {{ content }}
+    <div class="flex flex-row">
+    {% for post in site.posts limit: 3 %}
+
+    {% endfor %}
+    </div>
 </div>
