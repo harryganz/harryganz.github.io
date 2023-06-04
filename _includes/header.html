@@ -1,10 +1,10 @@
 <header>
-    <div class="flex flex-row">
+    <div class="flex flex-col-md-row">
         <img class="site-logo" alt="Bear Logo" src="{{ '/assets/img/bear_logo.png' | relative_url }}" height="64px" width="64px" />
         <a class="site-title flex-item" rel="author" href="{{ '/' | relative_url }}"><h1>{{ site.title | escape }}</h1></a>
         {% if site.pages %}
         <nav class="site-nav flex-right">
-            <div class="flex flex-row">
+            <div class="flex flex-col-md-row m-b-0-sm-1">
 
             {% for page in site.pages %}
                 {% assign is_page = page.url | matches_regex: "^\/page.*$" %}

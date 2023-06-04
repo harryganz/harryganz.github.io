@@ -212,6 +212,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  margin: 0;
+  padding: 1em 0;
 }
 
 h1 {
@@ -271,6 +273,10 @@ header .site-logo {
   transform: translateY(1em);
 }
 
+nav {
+  font-size: 1.25em;
+}
+
 main {
   padding: 1em;
   flex: 1;
@@ -284,29 +290,83 @@ article {
 .flex {
   display: flex;
 }
-.flex.flex-column {
+.flex.flex-col {
   flex-direction: column;
   align-items: baseline;
+}
+.flex.flex-col > .flex-item {
+  margin: 0.5em 0;
+}
+.flex.flex-col > .flex-item:first-child {
+  margin-top: 0;
+}
+.flex.flex-col > .flex-item:last-child {
+  margin-bottom: 0;
+}
+.flex.flex-col-md-row {
+  flex-direction: column;
+  align-items: baseline;
+}
+.flex.flex-col-md-row > .flex-item {
+  margin: 0.5em 0;
+}
+.flex.flex-col-md-row > .flex-item:first-child {
+  margin-top: 0;
+}
+.flex.flex-col-md-row > .flex-item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 600px) {
+  .flex.flex-col-md-row {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .flex.flex-col-md-row > .flex-item {
+    margin: 0 1em;
+  }
+  .flex.flex-col-md-row > .flex-item:first-child {
+    margin-left: 0;
+  }
+  .flex.flex-col-md-row > .flex-item:last-child {
+    margin-right: 0;
+  }
+  .flex.flex-col-md-row > .flex-left {
+    margin-right: auto;
+  }
+  .flex.flex-col-md-row > .flex-right {
+    margin-left: auto;
+  }
 }
 .flex.flex-row {
   flex-direction: row;
   align-items: baseline;
 }
-.flex > .flex-item {
-  display: block;
+.flex.flex-row > .flex-item {
   margin: 0 1em;
 }
-.flex > .flex-item:first-child {
+.flex.flex-row > .flex-item:first-child {
   margin-left: 0;
 }
-.flex > .flex-item:last-child {
+.flex.flex-row > .flex-item:last-child {
   margin-right: 0;
 }
-.flex > .flex-left {
+.flex.flex-row > .flex-left {
   margin-right: auto;
 }
-.flex > .flex-right {
+.flex.flex-row > .flex-right {
   margin-left: auto;
+}
+.flex > .flex-item {
+  display: block;
+}
+
+.m-b-0-sm-1 {
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 600px) {
+  .m-b-0-sm-1 {
+    margin-bottom: 0;
+  }
 }
 
 .m-t-1 {
