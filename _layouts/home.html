@@ -10,7 +10,7 @@ layout: default
             <div class="flex flex-col">
                 <a href="{{ post.url | relative_url }}" class="bhead">{{ post.title | escape }}</a>
                 <p class="byline">{{ post.date | date_to_long_string }}</p>
-                <p class="p-l-3">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+                <p class="p-l-1">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
             </div>
         {% endfor %}
     </div>
