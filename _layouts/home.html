@@ -3,9 +3,27 @@ layout: default
 ---
 
 <div class="page-content">
-    <div class="flex flex-row">
-    {% for post in site.posts limit: 3 %}
-
-    {% endfor %}
+    <div class="flex flex-column">
+        <h3>Posts</h3>
+        {% assign sorted_posts = paginator.posts | sort:date | reverse %}
+        {% for post in sorted_posts%}
+            <div class="flex flex-column">
+                <a href="{{ post.url | relative_url }}" class="bhead">{{ post.title | escape }}</a>
+                <p class="byline">{{ post.date | date_to_long_string }}</p>
+                <p class="p-l-3">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="flex flex-row pagination">
+        <div class="flex-item">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}">Previous</a>
+            {% endif %}
+        </div>
+        <div class="flex-item flex-right">
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}">Next</a>
+            {% endif %}
+        </div>
     </div>
 </div>

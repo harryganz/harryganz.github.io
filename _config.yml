@@ -29,6 +29,9 @@ show_excerpts: true
 # Build settings
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 3
 
 # Exclude from processing.
 # The following items will not be processed, by default.

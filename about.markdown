@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Harry Ganz is a Software Developer living in the Northeast U.S. Before working in Software, he worked as a Scientist at the National Oceanic and Atmospheric administration, studying reef fish species in South Florida. He still enjoys using R to answer practical questions, like how much he can expect to pay for a house. Sometimes, he finds time to be a DM for a D&D group, and also likes SCUBA diving and fishing. Most of his time, though, is spent taking care of family. 
+Hi. I am Harry Ganz. I am a software developer living in the Northeast U.S. I created this website as a way of collecting some of my personal projects and to share some of the things that I have learned about software development and data modeling with others.
 
-If you want to look at some of his projects that he might not want to post on this website, take a look at his [github account](https://github.com/harryganz). 
+If you want to look at some of his projects that I might not want to post on this website, take a look at his [github account](https://github.com/harryganz). 

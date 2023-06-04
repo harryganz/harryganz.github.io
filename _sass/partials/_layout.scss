@@ -37,6 +37,11 @@ main {
     @extend %resize-at-breakpoint-md;
 }
 
+article {
+    flex: 1;
+    width: 100%;
+}
+
 .flex {
     display: flex;
     &.flex-column {
@@ -64,3 +69,6 @@ main {
         margin-left: auto;
     }
 }
+
+@include margin-classifiers();
+@include padding-classifiers();
