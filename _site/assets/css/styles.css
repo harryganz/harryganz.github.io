@@ -206,7 +206,7 @@
   font-style: italic;
 }
 body {
-  font: 400 14px/1.25 "Ubuntu-Mono", sans-serif;
+  font: 400 16px/1.25 "Ubuntu-Mono", sans-serif;
   color: #fff;
 }
 
@@ -240,6 +240,10 @@ a {
 .byline {
   font-weight: normal;
   font-style: italic;
+}
+
+.highlight {
+  font: 400 14px/1.25 "Ubuntu-Mono", sans-serif;
 }
 
 @media screen and (min-width: 600px) {

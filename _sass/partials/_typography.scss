@@ -34,3 +34,7 @@ a {
     font-weight: normal;
     font-style: italic;
 }
+
+.highlight {
+    font: $code-font-weight #{$code-font-size}/#{$code-line-height} $base-font-family;
+}
