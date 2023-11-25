@@ -56,11 +56,9 @@
         
         
             <div class="flex flex-col">
-                <a href="/2023/06/04/authentication-part-1.html" class="bhead">Authentication | Part 1</a>
+                <a href="/2023/06/04/whitebox-vs-blackbox-testing.html" class="bhead">Whitebox vs. Blackbox Testing</a>
                 <p class="byline">04 June 2023</p>
-                <p class="p-l-1">This is the first part in a multipart series on Authentication. In it, I will describe how 
-to implement simple, secure, and modular authentication that can work with monolithic and 
-distributed web systems.
+                <p class="p-l-1">Many blog posts on testing belabor the need for “pure functions” that will always return the save value given the same inputs and never have any side effects. While this is nice to have, it is rarely achievable in real code bases that need to do IO operations or deal with third-party APIs. Even when it is technically achievable, it can be impractical. Instead, developers should aim for “blackbox” testing based entirely on inputs when possible, and “whitebox” testing, which “peeks” into the implementation, when it is not.
 </p>
             </div>
         
