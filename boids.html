@@ -1,0 +1,21 @@
+---
+layout: page
+title: Boids Demo
+---
+<div class="form-group inline justify-center">
+    <div class="form-item">
+        <label>Avoid Factor</label>
+        <input type="range" min="0" max="100" value="10" id="avoid-factor-input" />
+    </div>
+    <div class="form-item">
+        <label>Align Factor</label>
+        <input type="range" min="0" max="100" value="5" id="align-factor-input" />
+    </div>
+    <div class="form-item">
+        <label>Cohere Factor</label>
+        <input type="range" min="0" max="100" value="5" id="cohere-factor-input" />
+    </div>
+</div>
+<canvas id="canvas" width="1000" height="1000" style="background-color: #FFFFFF;"/>
+
+<script src="{{ '/assets/js/boids.js' | relative_url }}" defer></script>

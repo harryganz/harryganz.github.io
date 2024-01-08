@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" type="image/x-icon">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | Harry Ganz</title>
+<title>Boids Demo | Harry Ganz</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="About" />
+<meta property="og:title" content="Boids Demo" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/about/" />
-<meta property="og:url" content="http://localhost:4000/about/" />
+<link rel="canonical" href="http://localhost:4000/boids.html" />
+<meta property="og:url" content="http://localhost:4000/boids.html" />
 <meta property="og:site_name" content="Harry Ganz" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About" />
+<meta property="twitter:title" content="Boids Demo" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"About","name":"Harry Ganz","url":"http://localhost:4000/about/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Boids Demo","url":"http://localhost:4000/boids.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head><body><header>
@@ -55,10 +55,23 @@
     </div>
 </header><main aria-label="Content">
       <div class="flex flex-column">
-        <div class="page-content"><h2 class="page-heading">About</h2><p>Hi. I am Harry Ganz. I have been working professionally as a Software Developer since 2013 and created this website as a way of collecting some of my personal projects and share some of the things that I have learned about software development and data modeling with others.</p>
+        <div class="page-content"><h2 class="page-heading">Boids Demo</h2><div class="form-group inline justify-center">
+    <div class="form-item">
+        <label>Avoid Factor</label>
+        <input type="range" min="0" max="100" value="10" id="avoid-factor-input" />
+    </div>
+    <div class="form-item">
+        <label>Align Factor</label>
+        <input type="range" min="0" max="100" value="5" id="align-factor-input" />
+    </div>
+    <div class="form-item">
+        <label>Cohere Factor</label>
+        <input type="range" min="0" max="100" value="5" id="cohere-factor-input" />
+    </div>
+</div>
+<canvas id="canvas" width="1000" height="1000" style="background-color: #FFFFFF;"/>
 
-<p>If you want to look at other projects that I didn’t want to share here, you can look at my <a href="https://github.com/harryganz">github account</a>.</p>
-
+<script src="/assets/js/boids.js" defer></script>
 
 </div>
 

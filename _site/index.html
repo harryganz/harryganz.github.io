@@ -10,14 +10,14 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://harryganz.com/" />
-<meta property="og:url" content="https://harryganz.com/" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Harry Ganz" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Home","name":"Harry Ganz","url":"https://harryganz.com/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","headline":"Home","name":"Harry Ganz","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head><body><header>
@@ -39,6 +39,11 @@
             
                 
                 
+                    <a class="page-link flex-item" href="/boids.html">Boids Demo</a>
+                
+            
+                
+                
                     <a class="page-link flex-item" href="/">Home</a>
                 
             
@@ -54,6 +59,13 @@
     <div class="flex flex-col">
         <h3>Posts</h3>
         
+        
+            <div class="flex flex-col">
+                <a href="/2024/01/07/boids.html" class="bhead">Boids</a>
+                <p class="byline">07 January 2024</p>
+                <p class="p-l-1">One of the things I love about natural systems is how complex behavior can arise from sets of simple rules. In biology you see this fairly often, for example <a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lotka-Volterra equations</a> predict predator-prey interactions and can lead to very complex outcomes despite being incredibly simple. A famous example from the history of computer science is John Conway’s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a> which produces incredibly complex (and sometimes unpredictable) interactions between <em>cellular automata</em> from only four rules. A lesser known example are <a href="https://en.wikipedia.org/wiki/Boids">Boids</a>, or bird-oid objects, which demonstrate how three principles, <em>separation</em>, <em>alignment</em>, and <em>cohesion</em> can explain how flocking behavior can arise despite decentralized control. I implemented my own version of the Boids algorithm in Typescript using the HTML5 Canvas element to demonstrate flocking behavior, as well as a demo you can play with to see how the various elements affect flocking behavior.
+</p>
+            </div>
         
             <div class="flex flex-col">
                 <a href="/2023/06/04/whitebox-vs-blackbox-testing.html" class="bhead">Whitebox vs. Blackbox Testing</a>
