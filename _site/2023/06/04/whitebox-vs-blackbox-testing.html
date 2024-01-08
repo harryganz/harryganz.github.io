@@ -64,43 +64,43 @@
 
 <p>The “gold standard” of testing is “blackbox testing”, where code can be treated as a “blackbox” that you send inputs into and it returns outputs. Here is a very simple example of a blackbox test:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass {
-    public static int add(int x, int y) {
-        return x + y;
-    }
-}
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 
-class MyClassTest {
-    @Test
-    void testAdd() {
-        assertEquals(4, MyClass.add(2,2))
-    }
-}
-</code></pre></div></div>
+<span class="kd">class</span> <span class="nc">MyClassTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">testAdd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertEquals</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">MyClass</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">2</span><span class="o">))</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
 <p>Here, the <code class="language-plaintext highlighter-rouge">add</code> method will always return the same output for a given set of inputs. It doesn’t have any side effects, and will not throw an exception because it cannot reach the internet, for example.</p>
 
 <p>While this is a good ideal, it tends not to be very practical for “real” applications. Let me provide some examples so you can understand what the issues are:</p>
 
 <h3 id="problem-1-third-party-methodsapis">Problem 1: Third Party Methods/APIs</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import com.vendor.library.Vendor
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.vendor.library.Vendor</span>
 
-class MyClass { 
-    private Vendor v;
-    public MyClass(Vendor v) {
-        this.v = v;
-    }
+<span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span> 
+    <span class="kd">private</span> <span class="nc">Vendor</span> <span class="n">v</span><span class="o">;</span>
 
-    public String myMethod(int x) {
-        if (x == 1) {
-            return "Hello";
-        } else {
-            Vendor v = new Vendor();
-            return v.vendorMethod(x);
-        }
-    }
-}
-</code></pre></div></div>
+    <span class="kd">public</span> <span class="nf">MyClass</span><span class="o">(</span><span class="nc">Vendor</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">myMethod</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"Hello"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="nc">Vendor</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vendor</span><span class="o">();</span>
+            <span class="k">return</span> <span class="n">v</span><span class="o">.</span><span class="na">vendorMethod</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
 
 <p>You <em>could</em> cover this case by checking what the value returned by <code class="language-plaintext highlighter-rouge">vendorMethod</code> is for each value of x, update them when the third party API changes, and write a bunch of tests that don’t really have anything to do with the code that you wrote. If <code class="language-plaintext highlighter-rouge">vendorMethod</code> is a utility method that runs entirely locally and is stable, that is a practical option; however, if <code class="language-plaintext highlighter-rouge">vendorMethod</code> is making an HTTP call or something, then perhaps it might be a good idea to mock it out and only test code that you wrote. Unfortunately, this breaks the blackbox philosophy.</p>
 
@@ -110,62 +110,63 @@ class MyClass {
 
 <p>Another issue with blackbox testing is testing error states that occur from IO or are not directly related to input.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public String myMethod(String url) {
-    try {
-        return webApi.getData(url);
-    } catch (HttpException e) {
-        log.error("An error occurred", e)
-        return "";
-    }
-}
-</code></pre></div></div>
-<p>How are you going to trigger an IOException? Without mocking, it would be a pain. You could, again, create a test implementation for you webApi and force it throw an exception, but that is equivalent to mocking and requires considerably more effort.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nc">String</span> <span class="nf">myMethod</span><span class="o">(</span><span class="nc">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">webApi</span><span class="o">.</span><span class="na">getData</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">HttpException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">log</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">"An error occurred"</span><span class="o">,</span> <span class="n">e</span><span class="o">)</span>
+        <span class="k">return</span> <span class="s">""</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>How are you going to trigger an HttpException? Without mocking, it would be a pain. You could, again, create a test implementation for you webApi and force it throw an exception, but that is equivalent to mocking and requires considerably more effort.</p>
 
 <h2 id="whitebox-testing">Whitebox Testing</h2>
 
-<p>The common refrain to these issues is refactor your application to make everything “pure”. First, I think that for most applications that need to communicate with the file system, a database, or the web this is completely impractical advice. You can “isolate” the impurity by wrapping all IO calls in a utility class, but for large applications this often can mean a lot of boilerplate code that is basically duplicating the interface of an existing module. Also, if you are dealing with a legacy application that has a huge number of existing impure methods, you can spend literally years of developer time to refactor code with no practical value beyond “testability”. Instead, I would advocate whitebox testing in those cases to isolate the bits of code that you actually want to test. Whitebox testing does assume some knowledge of how the method works, but it also allows you to isolate exactly the code flows you want to test.</p>
+<p>The common refrain to these issues is refactor your application to make everything “pure”. For most applications that need to communicate with the file system, a database, or the web this is completely impractical advice. You can “isolate” the impurity by wrapping all IO calls in a utility class, but for large applications this often can mean a lot of boilerplate code that is basically duplicating the interface of an existing module. Also, if you are dealing with a legacy application that has a huge number of existing impure methods, you can spend literally years of developer time to refactor code with no practical value beyond “testability”. Instead, I would advocate whitebox testing in those cases to isolate the bits of code that you actually want to test. Whitebox testing does assume some knowledge of how the method works, but it also allows you to isolate exactly the code flows you want to test.</p>
 
 <p>Going back to the vendor example and using the Mockito library to mock out the vendor methods:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import com.vendor.library.Vendor
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.vendor.library.Vendor</span>
 
-class MyClass { 
-    private Vendor v;
-    public MyClass(Vendor v) {
-        this.v = v;
-    }
+<span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span> 
+    <span class="kd">private</span> <span class="nc">Vendor</span> <span class="n">v</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">MyClass</span><span class="o">(</span><span class="nc">Vendor</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+    <span class="o">}</span>
     
-    public String myMethod(int x) {
-        if (x == 1) {
-            return "Hello";
-        } else {
-            Vendor v = new Vendor();
-            return v.vendorMethod(x);
-        }
-    }
-}
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">myMethod</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"Hello"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="nc">Vendor</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vendor</span><span class="o">();</span>
+            <span class="k">return</span> <span class="n">v</span><span class="o">.</span><span class="na">vendorMethod</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 
-@ExtendWith(MockitoExtension.class)
-class MyClassTest {
-    @InjectMocks
-    MyClass myClass;
+<span class="nd">@ExtendWith</span><span class="o">(</span><span class="nc">MockitoExtension</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">class</span> <span class="nc">MyClassTest</span> <span class="o">{</span>
+    <span class="nd">@InjectMocks</span>
+    <span class="nc">MyClass</span> <span class="n">myClass</span><span class="o">;</span>
 
-    @Mock
-    Vendor v;
+    <span class="nd">@Mock</span>
+    <span class="nc">Vendor</span> <span class="n">v</span><span class="o">;</span>
 
-    @Test
-    void returnsHelloWhenXIsOne() {
-        assertEquals("Hello", myClass.myMethod(1));
-    }
+    <span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">returnsHelloWhenXIsOne</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertEquals</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">,</span> <span class="n">myClass</span><span class="o">.</span><span class="na">myMethod</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+    <span class="o">}</span>
 
-    @Test
-    void returnsVendorStringWhenXIsNotOne() {
-        when(v.vendorMethod(2)).thenReturn("vendor string");
-        assertEquals("vendor string", myClass.myMethod(2));
-    }
-}
-</code></pre></div></div>
-<p>I think that some will dismiss this as beating the code into shape and then testing that it takes that shape, but I think that this is sort of the essence of unit testing. Unlike integration tests, in unit test you want to check that a particular unit of code is doing what you want, irrespective of other units. To do that you need to check each branching pathway. If you can’t control the flow, you cannot do that.</p>
+    <span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">returnsVendorStringWhenXIsNotOne</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">when</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">vendorMethod</span><span class="o">(</span><span class="mi">2</span><span class="o">)).</span><span class="na">thenReturn</span><span class="o">(</span><span class="s">"vendor string"</span><span class="o">);</span>
+        <span class="n">assertEquals</span><span class="o">(</span><span class="s">"vendor string"</span><span class="o">,</span> <span class="n">myClass</span><span class="o">.</span><span class="na">myMethod</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Some will dismiss this as beating the code into shape and then testing that it takes that shape, but I think that this is sort of the essence of unit testing. Unlike integration tests, in unit test you want to check that a particular unit of code is doing what you want, irrespective of other units. To do that you need to check each branching pathway. If you can’t control the flow, you cannot do that.</p>
 
 <p>That being said, if you find yourself mocking out methods that you wrote, non-IO methods, or “normal” execution (e.g. non-error states), then perhaps a refactor is in order to make your code more “pure”. Whitebox testing should be used sparingly and in places where it makes sense. Over-utilizing whitebox testing can make tests fragile, as a change to implementation may require changes to tests.</p>
 </div>
