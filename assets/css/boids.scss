@@ -1,0 +1,90 @@
+---
+---
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-size: 16px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#content {
+	padding: 5em 0;
+	width: 400px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#controls {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-bottom: 2em;
+	gap: 1em 0.75em;
+}
+
+.control-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0 0.25em;
+}
+
+
+#canvas {
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+#play-buttons {
+	padding-top: 1em;
+	display: flex;
+	justify-content: center;
+	gap: 0 2em;
+}
+
+#play-buttons button {
+	padding: 5px 10px;
+	border-radius: 2px;
+}
+
+#start-btn {
+	color: #FFFFFF;
+	background-color: #2c942e;
+	border: 1px solid #2a6e22;
+}
+
+#start-btn:active {
+	background-color: #2a6e22;
+}
+
+#stop-btn {
+	color: #FFFFFF;
+	background-color: #94372c;
+	border: 1px solid #6e2a22;
+}
+
+#stop-btn:active {
+	background-color: #6e2a22;
+}
+
+@media screen and (min-width: 1000px) {
+	#content {
+		width: 600px;
+	}
+	#canvas {
+		width: 600px;
+	}
+	#controls {
+		flex-direction: row;
+	}
+	.control-group {
+		justify-content: flex-start;
+	}
+}
+
+
