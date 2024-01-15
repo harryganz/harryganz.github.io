@@ -1,0 +1,27 @@
+#controls {
+  margin: 1em 0;
+}
+
+.control-group {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+}
+
+#canvas {
+  background-color: #FFFFFF;
+}
+
+#play-buttons {
+  display: flex;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+#play-buttons button {
+  padding: 0.25em 0.5em;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+/*# sourceMappingURL=boids.css.map */
