@@ -30,8 +30,12 @@ show_excerpts: true
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-responsive-magick
 
 paginate: 3
+
+responsive:
+  widths: [480, 600, 720]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

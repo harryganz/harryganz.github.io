@@ -693,4 +693,10 @@ article {
   padding-left: 10em;
 }
 
+.img-responsive {
+  display: block;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
 /*# sourceMappingURL=styles.css.map */

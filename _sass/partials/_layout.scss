@@ -108,3 +108,9 @@ article {
 
 @include margin-classifiers();
 @include padding-classifiers();
+
+.img-responsive {
+    display: block;
+    margin: 0 auto;
+    padding: 1em 0;
+}
