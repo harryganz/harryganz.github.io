@@ -110,7 +110,15 @@ article {
 @include padding-classifiers();
 
 .img-responsive {
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .caption {
+        font-style: italic;
+        text-align: center;
+    }
     display: block;
-    margin: 0 auto;
+    width: 100%;
     padding: 1em 0;
 }
