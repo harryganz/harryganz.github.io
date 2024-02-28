@@ -4,7 +4,7 @@
         srcset="{{ include.src | srcset }}" 
         sizes="(max-width: 600px) 100vw, (max-width: 1200px) 600px, 720px"
     />
-    {% if include.caption %}
-        <p class="caption">{{ include.caption }}</p>
+    {% if include.alt %}
+        <p class="caption">{{ include.alt }}</p>
     {% endif %}
 </div>
