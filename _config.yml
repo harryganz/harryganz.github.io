@@ -32,6 +32,8 @@ plugins:
   - jekyll-paginate
   - jekyll-responsive-magick
 
+destination: docs/
+
 paginate: 3
 
 responsive:
