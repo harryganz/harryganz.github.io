@@ -12,14 +12,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Harry Ganz Personal Site and Blog" />
 <meta property="og:description" content="Harry Ganz Personal Site and Blog" />
-<link rel="canonical" href="https://harryganz.com/" />
-<meta property="og:url" content="https://harryganz.com/" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Harry Ganz" />
 <meta property="og:type" content="website" />
+<link rel="next" href="http://localhost:4000/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Harry Ganz Personal Site and Blog","headline":"Home","name":"Harry Ganz","url":"https://harryganz.com/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Harry Ganz Personal Site and Blog","headline":"Home","name":"Harry Ganz","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head><body>
@@ -63,6 +64,9 @@
                 
                 
             
+                
+                
+            
         </nav>
         
     </div>
@@ -72,6 +76,18 @@
     <div class="flex flex-col">
         <h3>Posts</h3>
         
+        
+            <div class="flex flex-col">
+                <a href="/2024/03/07/making-a-good-poc.html" class="bhead">Making a Good P.O.C.</a>
+                <p class="byline">07 March 2024</p>
+                <p class="p-l-1">Doing a proof-of-concept (P.O.C.) before building something complex or uncertain is an immensely useful 
+tool when developing software; however, I learned that it is pretty easy to mess up a P.O.C. and turn
+it from something useful into a total waste of time. If a P.O.C. is done right it can help identify
+tricky parts of an approach and nail down feasibility. If a P.O.C. is done wrong, it could fail to
+actually assess how feasible an approach is and lead to poor estimates, missed deadlines, and
+possibly even an unusable mess of software.
+</p>
+            </div>
         
             <div class="flex flex-col">
                 <a href="/2024/02/27/are-houses-actually-more-expensive.html" class="bhead">Are Houses Actually More Expensive?</a>
@@ -87,19 +103,14 @@
 </p>
             </div>
         
-            <div class="flex flex-col">
-                <a href="/2023/06/04/whitebox-vs-blackbox-testing.html" class="bhead">Whitebox vs. Blackbox Testing</a>
-                <p class="byline">04 June 2023</p>
-                <p class="p-l-1">Many blog posts on testing belabor the need for “pure functions” that will always return the save value given the same inputs and never have any side effects. While this is nice to have, it is rarely achievable in real code bases that need to do IO operations or deal with third-party APIs. Even when it is technically achievable, it can be impractical. Instead, developers should aim for “blackbox” testing based entirely on inputs when possible, and “whitebox” testing, which “peeks” into the implementation, when it is not.
-</p>
-            </div>
-        
     </div>
     <div class="flex flex-row pagination">
         <div class="flex-item">
             
         </div>
         <div class="flex-item flex-right">
+            
+                <a href="/page2">Next</a>
             
         </div>
     </div>
