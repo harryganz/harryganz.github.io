@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" type="image/x-icon">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>U.S. Home Values | Harry Ganz</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="U.S. Home Values" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Living in the Northeast U.S. and looking at houses on Zillow is painful. Everything is unaffordable, but it could be worse. I could be looking for homes in Teton County, Wyoming. In this post, I have collected county level home value data to find out where the most and least expensive places to buy a home in the U.S. are." />
+<meta property="og:description" content="Living in the Northeast U.S. and looking at houses on Zillow is painful. Everything is unaffordable, but it could be worse. I could be looking for homes in Teton County, Wyoming. In this post, I have collected county level home value data to find out where the most and least expensive places to buy a home in the U.S. are." />
+<link rel="canonical" href="https://harryganz.com/2024/07/25/us-home-values.html" />
+<meta property="og:url" content="https://harryganz.com/2024/07/25/us-home-values.html" />
+<meta property="og:site_name" content="Harry Ganz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-25T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="U.S. Home Values" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-25T00:00:00-04:00","datePublished":"2024-07-25T00:00:00-04:00","description":"Living in the Northeast U.S. and looking at houses on Zillow is painful. Everything is unaffordable, but it could be worse. I could be looking for homes in Teton County, Wyoming. In this post, I have collected county level home value data to find out where the most and least expensive places to buy a home in the U.S. are.","headline":"U.S. Home Values","mainEntityOfPage":{"@type":"WebPage","@id":"https://harryganz.com/2024/07/25/us-home-values.html"},"url":"https://harryganz.com/2024/07/25/us-home-values.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head><body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9F8FH9LMMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9F8FH9LMMH');
+</script>
+<header>
+    <div class="flex flex-col-md-row">
+        <img class="site-logo" alt="Bear Logo" src="/assets/img/bear_logo.png" height="64px" width="64px" />
+        <a class="site-title flex-item" rel="author" href="/"><h1>Harry Ganz</h1></a>
+        
+        <nav class="site-nav flex-right">
+            <div class="flex flex-col-md-row m-b-0-sm-1">
+
+            
+                
+                
+            
+                
+                
+                    <a class="page-link flex-item" href="/about/">About</a>
+                
+            
+                
+                
+            
+                
+                
+                    <a class="page-link flex-item" href="/">Home</a>
+                
+            
+                
+                
+            
+                
+                
+            
+        </nav>
+        
+    </div>
+</header><main aria-label="Content">
+      <div class="flex flex-column">
+        <article class="post">
+    
+        <h2 class="post-title">U.S. Home Values</h2>
+    
+
+    <div class="post-content"><p>Living in the Northeast U.S. and looking at houses on Zillow is painful. Everything is unaffordable, but it could be worse. I could be looking for homes in Teton County, Wyoming. In this post, I have collected county level home value data to find out where the most and least expensive places to buy a home in the U.S. are.</p>
+
+<h2 id="sources-and-methods">Sources and Methods</h2>
+
+<p>To find housing data, I used <a href="https://www.zillow.com/research/data/">Zillow’s Research Page</a> and downloaded the county level Zillow Housing Index (ZHVI), which represents the weighted average of the middle third of homes in a given region. The dataset I used was for the 34th to 65th percentile of single family homes and condominiums and was seasonally adjusted.</p>
+
+<p>To get the geographic data I used, I imported data from the <a href="https://cran.r-project.org/web/packages/tigris/index.html">tigris package</a> in R, as well as using the <a href="https://cran.r-project.org/web/packages/sf/index.html">sf package</a> for coordinate reference system transformations.</p>
+
+<p>For plotting I used <a href="https://ggplot2.tidyverse.org/">ggplot2</a> as well as several other <a href="https://www.tidyverse.org/">tidyverse packages</a> for data manipulation.</p>
+
+<p>The original data, source code, and figures can be found on my Github repo., <a href="https://github.com/harryganz/zillow_home_value">here</a>.</p>
+
+<h2 id="home-values-2014-2024">Home Values 2014-2024</h2>
+
+<div class="img-responsive ">
+    <img src="" alt="Typical Home Values in the U.S. from 2014 to 2024 from Zillow data." srcset="/assets/img/home-values/zhvi.gif 700w, /assets/img/home-values/zhvi-480w.gif 480w, /assets/img/home-values/zhvi-600w.gif 600w" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 600px, 720px" />
+    
+        <p class="caption">Typical Home Values in the U.S. from 2014 to 2024 from Zillow data.</p>
+    
+</div>
+
+<p>Some of the trends are not a surprise. California, especially the Bay Area, is one of the most expensive areas in the U.S. As are the major cities in the Northeast, such as Boston and New York. The Mississippi Valley and Great Plains are some of the cheapest areas. There are some surprises, however. Some counties in the Mountain West that have typical home values over $1 million in 2024, many of which had home prices closer to $500 thousand in 2014.</p>
+
+<div class="img-responsive ">
+    <img src="" alt="U.S. Counties with largest increase and decrease in home values from Jan. 31, 2014-2024." srcset="/assets/img/home-values/home_value_change.png 1200w, /assets/img/home-values/home_value_change-480w.png 480w, /assets/img/home-values/home_value_change-600w.png 600w, /assets/img/home-values/home_value_change-720w.png 720w" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 600px, 720px" />
+    
+        <p class="caption">U.S. Counties with largest increase and decrease in home values from Jan. 31, 2014-2024.</p>
+    
+</div>
+
+<p>Teton County has the largest change in home value, with the middle third of housing increasing by $1.6 million. This is mostly driven by the ultra-wealthy moving there for tax benefits. Wendover productions <a href="https://www.youtube.com/watch?v=bQE_zNs5HOU&amp;t=754s">made a video about it</a>.</p>
+
+<h2 id="most-and-least-expensive-counties-2024">Most and Least Expensive Counties, 2024</h2>
+
+<div class="img-responsive ">
+    <img src="" alt="U.S. Counties with highest and lowest typical home values as of Jan. 31, 2024" srcset="/assets/img/home-values/home_values.png 1200w, /assets/img/home-values/home_values-480w.png 480w, /assets/img/home-values/home_values-600w.png 600w, /assets/img/home-values/home_values-720w.png 720w" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 600px, 720px" />
+    
+        <p class="caption">U.S. Counties with highest and lowest typical home values as of Jan. 31, 2024</p>
+    
+</div>
+
+<p>Other than Teton County, Wyoming there aren’t any surprises here. The highest home values are in wealthy areas of Massachussets and California, and the lowest home values are in Appalachia and the Mississippi Valley.</p>
+</div>
+
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+
+    <div class="flex flex-row m-t-3">
+        <div class="flex-item">
+            
+                
+                
+                <a href="/2024/03/14/making-a-good-poc.html">Previous Post: Making a Good P.O.C.</a>
+            
+        </div>
+        <div class="flex-item flex-right">
+            
+            
+        </div>
+
+    </div>
+
+
+</article>
+      </div>
+    </main>
+  </body>
+
+</html>
