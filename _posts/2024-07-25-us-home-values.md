@@ -15,13 +15,13 @@ For plotting I used [ggplot2](https://ggplot2.tidyverse.org/) as well as several
 
 The original data, source code, and figures can be found on my Github repo., [here](https://github.com/harryganz/zillow_home_value).
 
-## Home Values 2014-2024
+## Home Values 2010-2024
 
-{% include responsive-image.html src='/assets/img/home-values/zhvi.gif' alt='Typical Home Values in the U.S. from 2014 to 2024 from Zillow data.' %}
+{% include responsive-image.html src='/assets/img/home-values/zhvi.gif' alt='Typical Home Values in the U.S. from 2010 to 2024 from Zillow data.' %}
 
-Some of the trends are not a surprise. California, especially the Bay Area, is one of the most expensive areas in the U.S. As are the major cities in the Northeast, such as Boston and New York. The Mississippi Valley and Great Plains are some of the cheapest areas. There are some surprises, however. Some counties in the Mountain West that have typical home values over $1 million in 2024, many of which had home prices closer to $500 thousand in 2014. 
+Some of the trends are not a surprise. California, especially the Bay Area, is one of the most expensive areas in the U.S. As are the major cities in the Northeast, such as Boston and New York. The Mississippi Valley and Great Plains are some of the cheapest areas. There are some surprises, however. Some counties in the Mountain West that have typical home values over $1 million in 2024, many of which had home prices closer to $500 thousand in 2010. 
 
-{% include responsive-image.html src='/assets/img/home-values/home_value_change.png' alt='U.S. Counties with largest increase and decrease in home values from Jan. 31, 2014-2024.' %}
+{% include responsive-image.html src='/assets/img/home-values/home_value_change.png' alt='U.S. Counties with largest increase and decrease in home values from Jan. 31, 2010-2024.' %}
 
 Teton County has the largest change in home value, with the middle third of housing increasing by $1.6 million. This is mostly driven by the ultra-wealthy moving there for tax benefits. Wendover productions [made a video about it](https://www.youtube.com/watch?v=bQE_zNs5HOU&t=754s). 
 
