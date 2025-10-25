@@ -1,5 +1,7 @@
-.highlight pre { background-color: $background-color; }
-.highlight .hll { background-color: $background-color; }
+@use 'partials/_variables';
+
+.highlight pre { background-color: variables.$background-color; }
+.highlight .hll { background-color: variables.$background-color; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
 .highlight .k { color: #66d9ef } /* Keyword */

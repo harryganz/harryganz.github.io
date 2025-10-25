@@ -1,6 +1,8 @@
+@use 'variables';
+
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
+    font: variables.$base-font-weight #{variables.$base-font-size}/#{variables.$base-line-height} variables.$base-font-family;
+    color: variables.$text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,8 +24,8 @@ h3, h4, h5, h6 {
 }
 
 a {
-    color: $text-color;
-    text-decoration: $link-decoration;
+    color: variables.$text-color;
+    text-decoration: variables.$link-decoration;
 }
 
 .bhead {
@@ -36,5 +38,5 @@ a {
 }
 
 .highlight {
-    font: $code-font-weight #{$code-font-size}/#{$code-line-height} $base-font-family;
+    font: variables.$code-font-weight #{variables.$code-font-size}/#{variables.$code-line-height} variables.$base-font-family;
 }
