@@ -693,11 +693,6 @@ article {
   padding-left: 10em;
 }
 
-.img-responsive {
-  display: block;
-  width: 100%;
-  padding: 1em 0;
-}
 .img-responsive img {
   display: block;
   margin: 0 auto;
@@ -705,6 +700,11 @@ article {
 .img-responsive .caption {
   font-style: italic;
   text-align: center;
+}
+.img-responsive {
+  display: block;
+  width: 100%;
+  padding: 1em 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
