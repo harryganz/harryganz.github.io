@@ -52,9 +52,14 @@ rip it off (the Dell Latitude 7350, Asus Pro Art PZ13, and Lenovo X12 Gen 2 bein
 
  {% include responsive-image.html src='/assets/img/surface-linux/tablet_mode.jpg' alt='Windows Computer in Tablet Mode. Photo by Felix Wong' %}
 
-## Running Linux on a Surface Device
+## Installing Linux on a Surface Device
 
-The solution, at least for me, was to install some flavor of linux on a surface device and to run Waydroid on it, allowing me
-to install Android applications. Linux offers a huge variaty of desktop environments and extensions which I can use to customize
+The solution, at least for me, was to install some flavor of linux on a Surface Pro and to run Waydroid on it, allowing me
+to install Android applications. Linux offers a huge variety of desktop environments and extensions which I can use to customize
 how I interact with the operating system, and Waydroid means that I can install and use purpose built mobile applications that 
 are meant to be interacted with on a tablet. 
+
+The Surface Pro 1-9 all used Intel based processors and the [Linux Surface](https://github.com/linux-surface/linux-surface) project 
+includes kernel extensions for getting all the Surface hardware to work with Linux, including the touch screen,
+type cover, and stylus. The newest Surface Pro 11 use Snapdragon X Elite processor, which is impressive,
+but which, as of October 2025, does not have great Linux support ([Ubuntu 20.05 has some support, although not for the Surface Pro 10](https://discourse.ubuntu.com/t/faq-ubuntu-25-04-on-snapdragon-x-elite/61016)).
