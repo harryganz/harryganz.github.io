@@ -103,12 +103,14 @@ adding the device to a list of authorized devices for my Google account and then
 Waydroid.
 
 **Netflix:**
+
 When I first installed Netflix, I was met with my first issue, an "Unable to Connect to Netflix" error. That was
 pretty simple to fix. I just needed to add [Widevine DRM](https://github.com/waydroid_script#integrate-widevine-drm-I3).
 It would be nice if the error said something about needing DRM, but enough people ran into this issue that a quick
 google search led me to the answer.
 
 **Disney Plus:**
+
 Installing Disney Plus was a complete failure. Disney has a whitelist of allowed devices which doesn't include 
 Waydroid. Perhaps there was a way to spoof the device ID or to find a shady APK, but I didn't bother. I might
 try again if I go on a trip and need to download some Disney shows for my son.
