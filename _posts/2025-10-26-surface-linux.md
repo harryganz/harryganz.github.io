@@ -3,19 +3,22 @@ title: Running Linux on a Surface Device
 layout: post
 ---
 
-When I saw the original Microsoft Surface I immediately though that it was the ideal laptop + tablet, 2-in-1 format: a perfect balance of power and portability. It had one problem, though. It ran Windows. It has been a decade, but I finally decided to get a Surface and turn it into the perfect, portable linux 2-in-1 that I had always dreamed of.
+When I saw the original Microsoft Surface I immediately though that it was the ideal laptop + tablet, 2-in-1 format: a perfect balance of power and portability. It had one problem, though. It ran Windows. It has been a decade, but I finally decided to get a Surface and turn it into the perfect, portable Linux 2-in-1 that I had always dreamed of.
 
 ## The Hardware
 
 The Surface name has branched out a bit into a set of only somewhat related devices, so I would
-like to specify that I am talking about the Microsoft Surface Pro line of hyper portable, 2-in-1 devices.
-These devices originally had Intel i3/i5/i7 processors, with the newest devices (10/11) having Snapdragon X 
-Pro and X Elite CPUs. The hardware has always been an impressive amount of processing power in an incredibly
-thin 12 or 13 inch. tablet. Microsoft also put a lot of thought into ergonomics, with a fairly unique kickstand
-to keep the tablet at various angles and a detachable keyboard and stylus. The keyboard (called a Type Cover) is worth talking about, as,
-from the very start, it was well designed to both fold over the screen for transport, as well as be detachable, making
-the Surface a "true" tablet. The more premium Alcantra Type Covers look nice and have decent
-keys with a surprising amount of travel and feedback for such a thin keyboard. 
+like to specify that I am talking about the Microsoft Surface Pro line of hyper portable,
+2-in-1 devices. These devices originally had Intel i3/i5/i7 processors, with the newest
+devices (10/11) having Snapdragon X Pro and X Elite CPUs. 
+The hardware has always been an impressive amount of processing power in an incredibly
+thin 12 or 13 inch. tablet. Microsoft also put a lot of thought into ergonomics, 
+with a fairly unique kickstand to keep the tablet at various angles and a detachable 
+keyboard and stylus. The keyboard (called a Type Cover) is worth talking about, as,
+from the very start, it was well designed to both fold over the screen for transport,
+as well as be detachable, making the Surface a "true" tablet. 
+The more premium Alcantra Type Covers look nice and have decent keys with a surprising amount
+of travel and feedback for such a thin keyboard. 
 
 The downside the Surface hardware, at least historically, is that it's battery life has never been great. 
 Not surprising given the use of modified i-series Intel chips, but a hyper portable device with only 3-4 hours of 
@@ -32,7 +35,7 @@ rip it off (the Dell Latitude 7350, Asus Pro Art PZ13, and Lenovo X12 Gen 2 bein
 ## The Problem with Windows
 
  The problem with the Surface Pro is software. That is not to say that Windows is a bad operating system. There 
- are plenty of linux purists who will dump on Windows for any and all reasons, but I am not among them.
+ are plenty of Linux purists who will dump on Windows for any and all reasons, but I am not among them.
  Windows is a decent desktop environment with a UX that is very easy for people familiar with it to use. 
  Sure, it didn't have an officially supported package manager until far too recently (2020), and its
  default terminal is not POSIX compliant, but, for most people that is not very important. The real problem
@@ -54,27 +57,27 @@ rip it off (the Dell Latitude 7350, Asus Pro Art PZ13, and Lenovo X12 Gen 2 bein
 
 ## Installing Linux on a Surface Device
 
-The solution, at least for me, was to install some flavor of linux on a Surface Pro and to run Waydroid on it, allowing me
+The solution, at least for me, was to install some flavor of Linux on a Surface Pro and to run Waydroid on it, allowing me
 to install Android applications. Linux offers a huge variety of desktop environments and extensions which I can use to customize
 how I interact with the operating system, and Waydroid means that I can install and use purpose built mobile applications that 
 are meant to be interacted with on a tablet. 
 
-The Surface Pro series 1 go 9 all used Intel based processors and the [Linux Surface](https://github.com/linux-surface/linux-surface) project 
+The Surface Pro series 1 go 9 all used Intel based processors and the [Linux Surface](https://github.com/Linux-surface/Linux-surface) project 
 includes kernel extensions for getting all the Surface hardware to work with Linux, including the touch screen,
 type cover, and stylus. The newest Surface Pro 11 use Snapdragon X Elite processor, which is impressive,
 but which, as of October 2025, does not have great Linux support ([Ubuntu 20.05 has some support, although not for the Surface Pro 10](https://discourse.ubuntu.com/t/faq-ubuntu-25-04-on-snapdragon-x-elite/61016)).
 
 With this information, I decided to find a used Surface Pro on eBay and install Fedora with a GNOME desktop environment. I 
 found a Surface 7 for less than $200, with Type Cover and Stylus included. There were Surface Pro 9s selling for around $700, 
-but I decided that if I were going to get something used, it might as well be cheap. When the Snapdragon CPUs get better linux
-support, I will probably get a new Surface Pro one and replace the OS with linux. 
+but I decided that if I were going to get something used, it might as well be cheap. When the Snapdragon CPUs get better Linux
+support, I will probably get a new Surface Pro one and replace the OS with Linux. 
 
 Installing Fedora on the Surface device was extremely straightforward. I [downloaded the workstation ISO](https://fedoraproject.org/workstation/download)
 for x86 CPUs, used the fedora-provided media writer, and followed the directions (e.g. disable secure boot, boot from USB, etc.). I chose not to keep
 a windows partition, but I think it would have been fairly easy to do that as well. The only catch is that, until I installed the surface kernel extensions, 
 I needed to use a USB keyboard and mouse as the touchscreen and detachable keyboard drivers are not included in the Linux kernel, by default. 
 
-Next, I installed the [surface kernel](https://github.com/linux-surface/linux-surface) via the package manager,
+Next, I installed the [surface kernel](https://github.com/Linux-surface/Linux-surface) via the package manager,
 which provides hardware support for surface devices. This allowed me to use the Type Cover, touchscreen, and even
 the stylus. The only issue that I had with the installation was that I could not re-enable secure boot. When I tried it would 
 kick me back to the boot options screen. I suspect that I needed to update the firmware to install newer certificates, but I
@@ -96,7 +99,7 @@ I expected some issues, but I was pleasantly surprised by how few issues I ran i
 
 **Waydroid:**
 
-[Waydoid](https://waydro.id/#install) is an Android emulator that runs on linux, it was 
+[Waydoid](https://waydro.id/#install) is an Android emulator that runs on Linux, it was 
 very easy to install by following the directions. Because I wanted to install apps from 
 the Play app, I needed to follow [their documentation](https://docs.waydro.id/faq/google-play-certification) on 
 adding the device to a list of authorized devices for my Google account and then switch to the GAPPS version of 
@@ -117,7 +120,7 @@ try again if I go on a trip and need to download some Disney shows for my son.
 
 **Neovim:**
 
-Getting NeoVim working was basically the same as on any linux device. There was some pain in downloading all the
+Getting NeoVim working was basically the same as on any Linux device. There was some pain in downloading all the
 dependencies for the various languages I use (Ruby is always a pain), but once I got them installed, the LSPs worked
 as expected and without any noticeable lag. [Here is a link to my NeoVim config](https://github.com/harryganz/nvim),
 if you are interested.
@@ -125,7 +128,7 @@ if you are interested.
 **Docker:**
 
 Docker was an interesting challenge. I expected it to be straightforward, and it was, but then something weird happened. 
-I installed the Docker client and daemon using the [instructions on the Docker website](https://docs.docker.com/desktop/setup/install/linux/fedora/)
+I installed the Docker client and daemon using the [instructions on the Docker website](https://docs.docker.com/desktop/setup/install/Linux/fedora/)
 and was able to build docker containers from Dockerfiles, but then something strange happened: my Waydroid container could 
 no longer connect to the internet. At first, I thought it was because I had updated software on my device, but it became
 clear that there was some sort of contention with port usage. Apparently, [Docker creates firewall rules that block 
@@ -140,5 +143,24 @@ Installing steam was sort of a joke on my part. I really didn't need to game on 
 idea of using a Windows device to run Linux to emulate Windows to play a game sounded like an interesting problem, and
 I wondered whether it would work. In short: Yes! It was actually extremely simple. I just found steam in the app installer UI,
 clicked install and it just worked. I got KSP running with about 30fps and medium settings. I doubt it could run anything 
-super GPU intensive, but for casual gaming it works fine. I also installed some Nintendo emulators to play old SNES/N64 games, 
-and those also worked well.
+super GPU intensive, but for casual gaming it works fine. I also installed some emulators to play old SNES/N64/DOS games, 
+and those also worked well. It seems that it can indeed run Doom.
+
+
+## Impressions and Next Steps
+
+Overall, I am really pleased with my decision to go install Linux on a Surface device. Between getting a brand new
+Surface Pro 11 and only running windows, buying something like a PineTab or Starlite tablet, or getting a used Surface Pro and 
+installing Linux, I think I made the correct choice for my intended use.
+Having the ability to install Android apps is a game changer, and I can customize the desktop environment however I like.
+
+I have done a bit of customization already, adding GNOME extensions which maximize windows on open and move new windows
+to their own workspace, but I might customize it a bit more. I want to tweak power usage and see if I can figure a way
+to reduce resources from background applications. 
+
+The only thing I really wish were better is battery life. It lasts about 3-4 hrs under normal usage (e.g. playing 
+video). Running a game on it drains the battery much faster, so it is not exactly a portable gaming machine. 
+
+In a few years, when Linux has better support for Snapdragon CPUs, I will probably upgrade and, hopefully, even
+that gap will be filled.
+
