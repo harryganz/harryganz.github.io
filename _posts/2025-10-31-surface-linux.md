@@ -12,9 +12,9 @@ like to specify that I am talking about the Microsoft Surface Pro line of hyper 
 2-in-1 devices. These devices originally had Intel i3/i5/i7 processors, with the newest
 devices (10/11) having Snapdragon X Pro and X Elite CPUs. 
 The hardware has always been an impressive amount of processing power in an incredibly
-thin 12 or 13 inch. tablet. Microsoft also put a lot of thought into ergonomics, 
-with a fairly unique kickstand to keep the tablet at various angles and a detachable 
-keyboard and stylus. The keyboard (called a Type Cover) is worth talking about, as,
+thin 12 or 13 inch tablet. Microsoft also put a lot of thought into ergonomics, 
+with a fairly unique kickstand to keep the tablet at various angles, a detachable 
+keyboard, and stylus. The keyboard (called a Type Cover) is worth talking about, as,
 from the very start, it was well designed to both fold over the screen for transport,
 as well as be detachable, making the Surface a "true" tablet. 
 The more premium Alcantra Type Covers look nice and have decent keys with a surprising amount
@@ -60,7 +60,7 @@ rip it off (the Dell Latitude 7350, Asus Pro Art PZ13, and Lenovo X12 Gen 2 bein
 The solution, at least for me, was to install some flavor of Linux on a Surface Pro and to run Waydroid on it, allowing me
 to install Android applications. Linux offers a huge variety of desktop environments and extensions which I can use to customize
 how I interact with the operating system, and Waydroid means that I can install and use purpose built mobile applications that 
-are meant to be interacted with on a tablet. 
+are designed to be interacted with on a tablet. 
 
 The Surface Pro series 1 go 9 all used Intel based processors and the [Linux Surface](https://github.com/Linux-surface/Linux-surface) project 
 includes kernel extensions for getting all the Surface hardware to work with Linux, including the touch screen,
@@ -73,16 +73,14 @@ but I decided that if I were going to get something used, it might as well be ch
 support, I will probably get a new Surface Pro one and replace the OS with Linux. 
 
 Installing Fedora on the Surface device was extremely straightforward. I [downloaded the workstation ISO](https://fedoraproject.org/workstation/download)
-for x86 CPUs, used the fedora-provided media writer, and followed the directions (e.g. disable secure boot, boot from USB, etc.). I chose not to keep
+for x86 CPUs, used the Fedora-provided media writer, and followed the directions (e.g. disable secure boot, boot from USB, etc.). I chose not to keep
 a windows partition, but I think it would have been fairly easy to do that as well. The only catch is that, until I installed the surface kernel extensions, 
 I needed to use a USB keyboard and mouse as the touchscreen and detachable keyboard drivers are not included in the Linux kernel, by default. 
 
 Next, I installed the [surface kernel](https://github.com/Linux-surface/Linux-surface) via the package manager,
 which provides hardware support for surface devices. This allowed me to use the Type Cover, touchscreen, and even
-the stylus. The only issue that I had with the installation was that I could not re-enable secure boot. When I tried it would 
-kick me back to the boot options screen. I suspect that I needed to update the firmware to install newer certificates, but I
-didn't really care enough to do that.
-
+the stylus. The only issue that I had is that the webcam [*is not currently supported*](https://github.com/linux-surface/linux-surface/discussions/1354).
+This might be a deal-breaker for some, so, if you absolutely need an integrated webcam to take Zoom calls, Surface Linux (on a 7+), may not be for you.
 
 ## Adding software
 
@@ -151,7 +149,7 @@ and those also worked well. It seems that it can indeed run Doom.
 
 Overall, I am really pleased with my decision to go install Linux on a Surface device. Between getting a brand new
 Surface Pro 11 and only running windows, buying something like a PineTab or Starlite tablet, or getting a used Surface Pro and 
-installing Linux, I think I made the correct choice for my intended use.
+installing Linux, I think I made the correct choice for my intended use (software dev. + media player).
 Having the ability to install Android apps is a game changer, and I can customize the desktop environment however I like.
 
 I have done a bit of customization already, adding GNOME extensions which maximize windows on open and move new windows
