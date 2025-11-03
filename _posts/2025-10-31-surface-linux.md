@@ -62,7 +62,7 @@ to install Android applications. Linux offers a huge variety of desktop environm
 how I interact with the operating system, and Waydroid means that I can install and use purpose built mobile applications that 
 are designed to be interacted with on a tablet. 
 
-The Surface Pro series 1 go 9 all used Intel based processors and the [Linux Surface](https://github.com/Linux-surface/Linux-surface) project 
+The Surface Pro series 1 to 9 all used Intel based processors and the [Linux Surface](https://github.com/Linux-surface/Linux-surface) project 
 includes kernel extensions for getting all the Surface hardware to work with Linux, including the touch screen,
 type cover, and stylus. The newest Surface Pro 11 use Snapdragon X Elite processor, which is impressive,
 but which, as of October 2025, does not have great Linux support ([Ubuntu 20.05 has some support, although not for the Surface Pro 10](https://discourse.ubuntu.com/t/faq-ubuntu-25-04-on-snapdragon-x-elite/61016)).
